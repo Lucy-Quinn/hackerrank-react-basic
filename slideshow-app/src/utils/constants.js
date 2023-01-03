@@ -1,16 +1,19 @@
 export const TITLE = "Slideshow App";
 export const BUTTON_DATA = [
   {
+    id: 1,
     type: "restart",
     dataTestId: "button-restart",
     className: "small outlined",
   },
   {
+    id: 2,
     type: "prev",
     dataTestId: "button-prev",
     className: "small",
   },
   {
+    id: 3,
     type: "next",
     dataTestId: "button-next",
     className: "small",

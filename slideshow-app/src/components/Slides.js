@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { useState } from "react";
 import { BUTTON_DATA, SLIDES_DATA } from "../utils/constants";
 import Button from "./Button";
@@ -14,12 +14,14 @@ function Slides() {
     <div>
       <div id="navigation" className="text-center">
         {BUTTON_DATA.map((buttonData) => (
-          <Button
-            buttonData={buttonData}
-            handleClick={handleClick}
-            slides={slides}
-            value={value}
-          />
+          <Fragment key={buttonData.id}>
+            <Button
+              buttonData={buttonData}
+              handleClick={handleClick}
+              slides={slides}
+              value={value}
+            />
+          </Fragment>
         ))}
       </div>
       <div id="slide" className="card text-center">

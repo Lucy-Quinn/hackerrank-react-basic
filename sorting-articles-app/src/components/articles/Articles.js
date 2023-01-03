@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Article from "./Article";
 
 function Articles({ articles }) {
@@ -14,7 +14,9 @@ function Articles({ articles }) {
         </thead>
         <tbody>
           {articles.map((article) => (
-            <Article article={article} />
+            <Fragment key={article.id}>
+              <Article article={article} />
+            </Fragment>
           ))}
         </tbody>
       </table>

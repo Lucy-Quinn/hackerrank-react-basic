@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BUTTON_DATA } from "../../utils/constants";
 import Button from "../buttons/Button";
 
@@ -9,11 +9,13 @@ const ButtonContainer = ({ handleClick, orderedArticles }) => {
         Sort By
       </label>
       {BUTTON_DATA.map((buttonData) => (
-        <Button
-          buttonData={buttonData}
-          handleClick={handleClick}
-          orderedArticles={orderedArticles}
-        />
+        <Fragment key={buttonData.id}>
+          <Button
+            buttonData={buttonData}
+            handleClick={handleClick}
+            orderedArticles={orderedArticles}
+          />
+        </Fragment>
       ))}
     </div>
   );
